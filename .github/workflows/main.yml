@@ -23,7 +23,7 @@ jobs:
         run: pip install pyinstaller
 
       - name: Build EXE
-        run: pyinstaller main.py --onefile --name bpsr-fishing --hidden-import=ctypes
+        run: pyinstaller main.py --onefile --name bpsr-fishing --hidden-import=ctypes --hidden-import=uuid
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
